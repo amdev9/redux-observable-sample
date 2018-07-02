@@ -10,7 +10,7 @@ const startCountdownEpic = (action$) => {
    */
   return action$.ofType(START_COUNTDOWN).switchMap(q => {
 
-    const start = 5;
+    const start = 4;
 
     /*
      * A countdown generates a 5,4,3,2,1,0,-1 series of events,

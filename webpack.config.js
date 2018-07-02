@@ -22,5 +22,6 @@ entry: './js/main.js',
     stats: {
         colors: true
     },
-    devtool: 'source-map'
+    devtool: 'source-map',
+    watch: true
 };
