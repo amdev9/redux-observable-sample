@@ -1,6 +1,3 @@
-/**
- * The new saga that uses redux observable.
- */
 import "babel-polyfill"
 
 import React from 'react'
@@ -16,12 +13,6 @@ import { rootEpic } from './epics';
 
 const epicMiddleware = createEpicMiddleware(rootEpic);
 
-/**
- * this is the Redux state store.
- */
-
-//todo add redux-logger to show actions in devTools
-
 const middleware = [epicMiddleware, logger]; 
 const enhanced = [
     applyMiddleware(...middleware),
@@ -29,11 +20,6 @@ const enhanced = [
 const enhancer = compose(...enhanced);
 const store = createStore(reducer, {}, enhancer);
  
-// const store = createStore(
-//   reducer,
-//   applyMiddleware(epicMiddleware, logger)
-// );
-
 render(
   <Provider store={store}>
     <Counter />
