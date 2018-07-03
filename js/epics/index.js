@@ -54,6 +54,3 @@ const startCountdownEpic = (action$) => {
 export const rootEpic = combineEpics(
   startCountdownEpic
 );
-
-
-
