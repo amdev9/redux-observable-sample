@@ -11,7 +11,7 @@ import { createEpicMiddleware } from 'redux-observable';
 import { logger } from 'redux-logger';
 import { rootEpic } from './epics';
 
-const epicMiddleware = createEpicMiddleware(rootEpic);
+const epicMiddleware = createEpicMiddleware();
 
 const middleware = [epicMiddleware, logger]; 
 const enhanced = [
@@ -20,6 +20,8 @@ const enhanced = [
 const enhancer = compose(...enhanced);
 const store = createStore(reducer, {}, enhancer);
  
+epicMiddleware.run(rootEpic);
+
 render(
   <Provider store={store}>
     <Counter />
