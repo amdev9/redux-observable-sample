@@ -10,7 +10,8 @@ import {
   INCREMENT_ASYNC,
   CANCEL_INCREMENT_ASYNC,
   HIDE_CONGRATULATION,
-  START_COUNTDOWN
+  START_COUNTDOWN,
+  FETCH_SUCCESS
 } from '../actionTypes'
 
 function Counter({counter, countdown, congratulate, dispatch}) {
@@ -23,14 +24,13 @@ function Counter({counter, countdown, congratulate, dispatch}) {
       <button onClick={action(INCREMENT)}>+</button>
       {' '}
       <button onClick={action(DECREMENT)}>-</button>
+      {/* {' '}
+      <button onClick={action(INCREMENT_IF_ODD)}>Increment if odd</button> */}
       {' '}
-      <button onClick={action(INCREMENT_IF_ODD)}>Increment if odd</button>
-      {' '}
+      <button onClick={ action(START_COUNTDOWN)}>start countdown
+      </button>
       <button
-        onClick={countdown ? action(CANCEL_INCREMENT_ASYNC) : action(START_COUNTDOWN)}
-        style={{color: countdown ? 'red' : 'black'}}>
-
-        {countdown ? `Cancel increment (${countdown})` : 'increment after 5s'}
+        onClick={action(FETCH_SUCCESS)}>fetch success
       </button>
     </div>
   )

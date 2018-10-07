@@ -10,3 +10,7 @@ export const CANCEL_INCREMENT_ASYNC = 'CANCEL_INCREMENT_ASYNC';
 export const START_COUNTDOWN = 'START_COUNTDOWN';
 // this action is not used anymore instead.
 export const COUNTDOWN_TERMINATED = 'COUNTDOWN_TERMINATED';
+
+
+export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+
